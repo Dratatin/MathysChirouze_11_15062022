@@ -1,0 +1,17 @@
+.banner {
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    img {
+        filter: brightness(0.6);
+        width: 100%;
+    }
+    h1 {
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

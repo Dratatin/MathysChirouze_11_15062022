@@ -1,5 +1,4 @@
-import "./Banner.css"
-import bannerBG from '../../assets/bannerBG.png'
+import bannerBG from '../assets/bannerBG.png'
 
 const Banner = () => {
     return (

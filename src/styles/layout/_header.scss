@@ -1,0 +1,23 @@
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0;
+    width: 100%;
+    &__logo img{
+        height: 70px;
+        width: 100%;
+    }
+    &__nav ul{
+        display: flex;
+        color: #FF6060;
+        font-size: 24px;
+        font-weight: 500;
+        li:first-child{
+            margin-right: 3em;
+        }
+        li.active{
+            text-decoration: underline;
+        }
+    }
+}

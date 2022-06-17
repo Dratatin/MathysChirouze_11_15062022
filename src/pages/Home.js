@@ -1,5 +1,4 @@
 import Banner from '../components/Banner'
-import Header from '../components/Header'
 import Card from '../components/Card'
 
 const Home = () => {
@@ -8,13 +7,10 @@ const Home = () => {
   //   .then(json => console.log(json))
   return (
     <div className="home">
-      <Header />
-      <main className="home__main">
-        <Banner />
-        <section className="home__main__content">
-          <Card />
-        </section>
-      </main>
+      <Banner />
+      <section className="home__content">
+        <Card />
+      </section>
     </div>
   )
 }

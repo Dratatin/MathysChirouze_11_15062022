@@ -54,7 +54,7 @@ code {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 3em 0;
-  width: 100%;
+  width: 85vw;
 }
 .header__logo img {
   height: 70px;
@@ -142,7 +142,7 @@ code {
           justify-content: center;
   width: 85vw;
 }
-.home__main__content {
+.home__content {
   background-color: #F6F6F6;
   border-radius: 1.5em;
   display: grid;
@@ -150,4 +150,5 @@ code {
   grid-template-columns: repeat(3, 1fr);
   margin: 3em 0;
   padding: 3em;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

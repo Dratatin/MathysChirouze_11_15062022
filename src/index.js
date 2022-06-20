@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from './layout/Header'
+import Footer from './layout/Footer'
 import './styles/main.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
           <Route path="/a-propos" element={<About />}/>
         </Routes>
       </main>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );

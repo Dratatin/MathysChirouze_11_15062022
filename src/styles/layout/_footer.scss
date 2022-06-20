@@ -1,0 +1,12 @@
+.footer {
+    align-items: center;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    padding: 1em;
+    &__logoContainer {
+        margin: 1em;
+    }
+}

@@ -1,9 +1,12 @@
-// import Banner from '../components/Banner'
+import Banner from '../components/Banner'
 
 const About = () => {
   return (
     <div className="about">
-      test
+      <Banner />
+      <section className="about__content">
+        {/* <DropdownDescription /> */}
+      </section>
     </div>
   )
 }

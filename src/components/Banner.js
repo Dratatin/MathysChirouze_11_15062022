@@ -1,9 +1,9 @@
-import bannerBG from '../assets/bannerBG.png'
+import bannerHome from '../assets/bannerHome.png'
 
 const Banner = () => {
     return (
         <div className="banner">
-            <img src={bannerBG} alt="Paysage, mers et montagnes"/>
+            <img src={bannerHome} alt="Paysage, mers et montagnes"/>
             <h1>Chez vous, partout et ailleurs</h1>
         </div>
     )

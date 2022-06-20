@@ -1,0 +1,18 @@
+.error404 {
+    color: $primary;
+    text-align: center;
+    margin: 10em;
+    h2 {
+        font-size: 288px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    a {
+        display: block;
+        text-decoration: underline;
+        margin: 10em;
+    }
+}

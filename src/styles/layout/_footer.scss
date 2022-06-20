@@ -1,11 +1,15 @@
 .footer {
     align-items: center;
     background: black;
+    bottom: 0;
     color: white;
     display: flex;
     flex-direction: column;
     font-size: 24px;
+    left: 0;
     padding: 1em;
+    position: absolute;
+    right: 0;
     &__logoContainer {
         margin: 1em;
     }

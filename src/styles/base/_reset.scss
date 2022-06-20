@@ -5,7 +5,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-  
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    padding-bottom: 11em;
+    position: relative;
+}
+
 ul {
     list-style-type: none;
 }

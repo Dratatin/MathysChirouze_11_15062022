@@ -72,7 +72,7 @@ code {
 .header__nav ul li:first-child {
   margin-right: 3em;
 }
-.header__nav ul li.active {
+.header__nav ul li a.active {
   text-decoration: underline;
 }
 
@@ -152,19 +152,6 @@ code {
 }
 
 .home {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 auto;
   width: 85vw;
 }
@@ -180,19 +167,6 @@ code {
 }
 
 .about {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 auto;
   width: 85vw;
 }

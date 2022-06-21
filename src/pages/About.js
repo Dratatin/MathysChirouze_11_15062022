@@ -1,12 +1,16 @@
 import AboutIMG from '../assets/bannerAbout.png'
 import Banner from '../components/Banner'
+import Dropdown from '../components/Dropdown'
+import AboutData from '../data/about'
 
 const About = () => {
   return (
     <div className="about">
       <Banner imgBanner={AboutIMG}/>
       <section className="about__content">
-        {/* <DropdownDescription /> */}
+        {AboutData.map((element) => (
+          <Dropdown key={element.id} title={element.title} description={element.text}/>
+        ))}
       </section>
     </div>
   )

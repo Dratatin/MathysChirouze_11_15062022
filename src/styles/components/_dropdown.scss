@@ -1,0 +1,26 @@
+.dropdown {
+    margin: 2em auto;
+    width: 65vw;
+    &__button {
+        background: $primary;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.4em 0.8em;
+        &--expanded {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__content {
+        background: $grey;
+        border-radius: 5px;
+        color: $primary;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 1em;
+    }
+}

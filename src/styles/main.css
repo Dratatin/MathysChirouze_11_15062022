@@ -40,6 +40,11 @@ h2 {
   font-size: 48px;
 }
 
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -151,6 +156,37 @@ code {
   width: 100%;
 }
 
+.dropdown {
+  margin: 2em auto;
+  width: 65vw;
+}
+.dropdown__button {
+  background: #FF6060;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.4em 0.8em;
+}
+.dropdown__button--expanded img {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.dropdown__content {
+  background: #F6F6F6;
+  border-radius: 5px;
+  color: #FF6060;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 1em;
+}
+
 .home {
   margin: 0 auto;
   width: 85vw;
@@ -170,6 +206,10 @@ code {
   margin: 0 auto;
   width: 85vw;
 }
+.about__content {
+  margin-bottom: 5em;
+}
+
 .error404 {
   color: #FF6060;
   text-align: center;

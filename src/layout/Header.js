@@ -10,10 +10,10 @@ function Header() {
         <nav className="header__nav">
             <ul>
                 <li>
-                  <NavLink activeClassName={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">Acceuil</NavLink>
+                  <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">Acceuil</NavLink>
                 </li>
                 <li>
-                  <NavLink activeClassName={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/a-propos">A propos</NavLink>
+                  <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/a-propos">A propos</NavLink>
                 </li>
             </ul>
         </nav>

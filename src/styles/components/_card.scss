@@ -1,23 +1,30 @@
 .card {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     border-radius: 1em;
     overflow: hidden;
-    &__link {
-        position: relative;
-        h2 {
-            bottom: 1em;
-            color: white;
-            font-size: 18px;
-            left: 1em;
-            position: absolute;
-            width: 90px;
-            z-index: 1;
+    display: block;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0));
         }
-        img {
-            opacity: 0.8;
-            vertical-align: bottom;
-            height: 340px;
-            width: 100%;    
-        }
+    h2 {
+        bottom: 0;
+        color: white;
+        font-size: 18px;
+        left: 0;
+        margin: 1em;
+        position: absolute;
+        z-index: 1;
+    }
+    img {
+        object-fit: cover;
+        vertical-align: bottom;
+        height: 340px;
+        width: 100%;    
     }
 }

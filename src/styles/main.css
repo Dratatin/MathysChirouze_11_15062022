@@ -131,26 +131,34 @@ code {
 }
 
 .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(0, 0, 0)));
-  background: -o-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
   border-radius: 1em;
   overflow: hidden;
-}
-.card__link {
+  display: block;
   position: relative;
 }
-.card__link h2 {
-  bottom: 1em;
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0)), to(rgb(0, 0, 0)));
+  background: -o-linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0));
+}
+.card h2 {
+  bottom: 0;
   color: white;
   font-size: 18px;
-  left: 1em;
+  left: 0;
+  margin: 1em;
   position: absolute;
-  width: 90px;
   z-index: 1;
 }
-.card__link img {
-  opacity: 0.8;
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: bottom;
   height: 340px;
   width: 100%;
@@ -171,7 +179,7 @@ code {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.4em 0.8em;
+  padding: 0.4em 2em 0.4em 1em;
 }
 .dropdown__button--expanded img {
   -webkit-transform: rotate(180deg);
@@ -191,15 +199,17 @@ code {
   margin: 0 auto;
   width: 85vw;
 }
-.home__content {
+.home__houses {
   background-color: #F6F6F6;
   border-radius: 1.5em;
-  display: grid;
-  gap: 1em;
-  grid-template-columns: repeat(3, 1fr);
   margin: 3em 0;
   padding: 3em;
   width: 100%;
+}
+.home__houses__list {
+  display: grid;
+  gap: 3em;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .about {

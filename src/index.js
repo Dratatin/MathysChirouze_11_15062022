@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import Housing from './pages/Housing';
 import Error404 from './pages/Error404';
 import Header from './layout/Header'
 import Footer from './layout/Footer'
@@ -18,6 +19,7 @@ root.render(
           <Route path="/" element={<Home />}/>
           <Route path="/a-propos" element={<About />}/>
           <Route path="*" element={<Error404 />}/>
+          <Route path="/location/:id" element={<Housing />}/>
         </Routes>
       </main>
       <Footer />

@@ -2,7 +2,6 @@ import HomeIMG from '../assets/bannerHome.png'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -25,9 +24,7 @@ const Home = () => {
         <ul className="home__houses__list">
           {data.map((item) => (
             <li key={item.id}>
-              <Link to={"/"}>
-                <Card title={item.title} img={item.cover} />
-              </Link>
+                <Card id={item.id} title={item.title} img={item.cover} />
             </li>
           ))}
         </ul>

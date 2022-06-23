@@ -1,0 +1,37 @@
+.slider {
+    background: $primary;
+    border-radius: 1.5em;
+    overflow: hidden;
+    position: relative;
+    &__content {
+        img {
+            height: 415px;
+            object-fit: cover;
+            vertical-align: bottom;
+            width: 100%;
+        }
+    }
+    &__count {
+        color: white;
+        bottom: 1em;
+        font-size: 18px;
+        font-weight: 500;
+        left: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+    &__arrowleft {
+        cursor: pointer;
+        left: 1em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__arrowright {
+        cursor: pointer;
+        right: 1em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}

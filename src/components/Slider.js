@@ -4,10 +4,20 @@ import arrow from "../assets/sliderarrow.svg"
 const Slider = ({tabimages}) => {
     const [slideIndex, setSlideIndex] = useState(0)
     const nextSlide = () => {
-        setSlideIndex(slideIndex + 1)
+        if (slideIndex !== (tabimages.length - 1)) {
+            setSlideIndex(slideIndex + 1)
+        }
+        else {
+            setSlideIndex(0)
+        }
     }
     const previousSlide = () => {
-        setSlideIndex(slideIndex - 1)
+        if (slideIndex !== 0) {
+            setSlideIndex(slideIndex - 1)
+        }
+        else {
+            setSlideIndex(tabimages.length - 1)
+        }
     }
     return (
         <div className="slider">
@@ -15,7 +25,7 @@ const Slider = ({tabimages}) => {
                 <img src={tabimages[slideIndex]} alt="menfou pas lu" />
             </div>
             <div className="slider__count">
-                    1/4
+                    {slideIndex + 1}/{tabimages.length}
             </div>
             <button className="slider__arrowleft" onClick={previousSlide}>
                 <img src={arrow} alt="flèche vers la gauche" />

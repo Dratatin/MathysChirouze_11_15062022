@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Slider from '../components/Slider';
+import Dropdown from '../components/Dropdown';
 
 
 const Housing = () => {
@@ -36,9 +37,37 @@ const Housing = () => {
     return <div>Chargement...</div>;
   } else {
     return (
-      <div className="location">
-      <Slider tabimages={items.pictures} />
-    </div>
+      <div className="housing">
+        <Slider tabimages={items.pictures} />
+        <section className="housing__content">
+          <div className="housing__content__heading">
+            <div className="housing__content__heading__title">
+              <h2>{items.title}</h2>
+              <h4>{items.location}</h4>
+            </div>
+            <div className="housing__content__heading__host">
+              <img src={items.host.picture} alt={items.title}/>
+              <h4>{items.host.name}</h4>
+            </div>
+          </div>
+          <div className="housing__content__details">
+            <ul className="housing__content__details__tags">
+              {items.tags.map((tag, index) => (
+                <li key={index}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+            <div>
+
+            </div>
+          </div>
+          <div className="housing__content__description">
+            <Dropdown title="Description" description={items.description}/>
+            <Dropdown title="Equipement" description={items.equipements}/>
+          </div>
+        </section>
+      </div>
     );
   }
 }

@@ -3,7 +3,7 @@ const Banner = ({imgBanner, title}) => {
         <div className="banner">
             <img src={imgBanner} alt="Paysage de la nature"/>
             {title !== undefined && (
-                <h1>{title}</h1>
+                <h2>{title}</h2>
             )}
         </div>
     )

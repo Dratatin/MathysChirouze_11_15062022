@@ -5,7 +5,7 @@ const Card = ({id, title, img}) => {
         <Link to={`/location/${id}`}>
             <article className="card">
                 <img src={img} alt=""/>
-                <h2>{title}</h2>
+                <h4>{title}</h4>
             </article>
         </Link>
     )

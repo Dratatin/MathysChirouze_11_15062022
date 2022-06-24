@@ -36,19 +36,20 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-h1 {
-  font-weight: 500;
-  font-size: 48px;
-}
-
 h2 {
+  color: #FF6060;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 code {
@@ -127,8 +128,9 @@ code {
           filter: brightness(0.6);
   width: 100%;
 }
-.banner h1 {
+.banner h2 {
   color: white;
+  font-size: 48px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -153,10 +155,9 @@ code {
   background: -o-linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0));
   background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0));
 }
-.card h2 {
+.card h4 {
   bottom: 0;
   color: white;
-  font-size: 18px;
   left: 0;
   margin: 1em;
   position: absolute;
@@ -261,12 +262,71 @@ code {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.location {
-  margin: 0 auto;
+.housing {
+  margin: 0 auto 5em auto;
   width: 85vw;
 }
-.location__content {
-  margin-bottom: 5em;
+.housing__content {
+  color: #FF6060;
+}
+.housing__content__heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2em auto;
+}
+.housing__content__heading__title h2 {
+  margin-bottom: 0.3em;
+}
+.housing__content__heading__host {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.housing__content__heading__host img {
+  border-radius: 5em;
+  margin-left: 1em;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 64px;
+}
+.housing__content__heading__host h4 {
+  text-align: right;
+  width: 100px;
+}
+.housing__content__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.housing__content__details__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.housing__content__details__tags li {
+  background: #FF6060;
+  border-radius: 0.75em;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5em;
+  padding: 0.5em 2em;
 }
 
 .about {

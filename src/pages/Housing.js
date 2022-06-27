@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Slider from '../components/Slider';
 import Dropdown from '../components/Dropdown';
+import Stars from '../components/Starts'
 
 
 const Housing = () => {
@@ -58,8 +59,8 @@ const Housing = () => {
                 </li>
               ))}
             </ul>
-            <div>
-
+            <div className="housing__content__details__stars">
+                <Stars rating={items.rating}/>
             </div>
           </div>
           <div className="housing__content__description">

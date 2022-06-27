@@ -1,0 +1,12 @@
+.stars {
+    display: flex;
+    &__star {
+        font-size: 48px;
+        &--active {
+            color: $primary;
+        }
+        &--inactive {
+            color: $inactivestar;
+        }
+    }
+}

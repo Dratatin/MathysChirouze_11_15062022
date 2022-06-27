@@ -63,8 +63,8 @@ const Housing = () => {
             </div>
           </div>
           <div className="housing__content__description">
-            <Dropdown title="Description" description={items.description}/>
-            <Dropdown title="Equipement" description={items.equipements}/>
+            <Dropdown title="Description" content={items.description}/>
+            <Dropdown title="Equipement" content={items.equipments}/>
           </div>
         </section>
       </div>

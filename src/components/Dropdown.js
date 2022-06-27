@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 
-const Dropdown = ({title, description}) => {
+const Dropdown = ({title, content}) => {
     const [isExpended, setIsExpended] = useState(false);
 
     const toogleExpand = () => {
@@ -13,11 +13,18 @@ const Dropdown = ({title, description}) => {
     return (
         <div className="dropdown">
             <div className={isExpended ? "dropdown__button dropdown__button--expanded" : "dropdown__button" } role="button" onClick={toogleExpand}>
-                <h3>{title}</h3>
+                <h3 className="dropdown__button__title">{title}</h3>
                 <img src={Arrow} alt="Arrow icon"/>
             </div>
-                {isExpended && (
-                    <p className="dropdown__content">{description}</p>
+                {isExpended && (typeof content === "string") && (
+                    <p className="dropdown__content">{content}</p>
+                )}
+                {isExpended && (typeof content === "object") && (
+                    <ul className="dropdown__content">
+                    {content.map((equipement) => (
+                        <li key={equipement}>{equipement}</li>
+                    ))}
+                    </ul>
                 )}
         </div>
     )

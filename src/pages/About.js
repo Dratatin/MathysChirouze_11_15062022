@@ -9,7 +9,7 @@ const About = () => {
       <Banner imgBanner={AboutIMG}/>
       <section className="about__content">
         {AboutData.map((element) => (
-          <Dropdown key={element.id} title={element.title} description={element.text}/>
+          <Dropdown key={element.id} title={element.title} content={element.text}/>
         ))}
       </section>
     </div>

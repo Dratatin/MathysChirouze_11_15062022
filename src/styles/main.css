@@ -13,7 +13,7 @@ html {
 
 body {
   min-height: 100%;
-  padding-bottom: 11em;
+  padding-bottom: 180px;
   position: relative;
 }
 
@@ -44,7 +44,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h4 {
@@ -171,10 +171,6 @@ code {
   width: 100%;
 }
 
-.dropdown {
-  margin: 2em auto;
-  width: 65vw;
-}
 .dropdown__button {
   background: #FF6060;
   border-radius: 5px;
@@ -188,6 +184,9 @@ code {
           justify-content: space-between;
   padding: 0.4em 2em 0.4em 1em;
 }
+.dropdown__button__title {
+  font-size: inherit;
+}
 .dropdown__button--expanded img {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -197,7 +196,6 @@ code {
   background: #F6F6F6;
   border-radius: 5px;
   color: #FF6060;
-  font-size: 24px;
   font-weight: 400;
   padding: 1em;
 }
@@ -305,7 +303,7 @@ code {
 }
 .housing__content__heading__host h4 {
   text-align: right;
-  width: 100px;
+  width: 90px;
 }
 .housing__content__details {
   display: -webkit-box;
@@ -314,6 +312,7 @@ code {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 2em auto;
 }
 .housing__content__details__tags {
   display: -webkit-box;
@@ -328,13 +327,28 @@ code {
   margin-right: 0.5em;
   padding: 0.5em 2em;
 }
+.housing__content__description {
+  display: grid;
+  font-size: 1.2em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2em auto;
+}
 
 .about {
   margin: 0 auto;
   width: 85vw;
 }
 .about__content {
-  margin-bottom: 5em;
+  font-size: 1.5em;
+  margin: 1.5em auto 5em auto;
+  width: 65vw;
+}
+.about__content > * {
+  margin-bottom: 1.5em;
 }
 
 .error404 {

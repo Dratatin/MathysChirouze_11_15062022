@@ -1,14 +1,22 @@
 .slider {
     background: $primary;
     border-radius: 1.5em;
+    margin: auto;
     overflow: hidden;
     position: relative;
+    width: 85vw;
+    @media screen and (max-width: $screen-phone) {
+        width: 90vw;
+    }
     &__content {
         img {
             height: 415px;
             object-fit: cover;
             vertical-align: bottom;
             width: 100%;
+            @media screen and (max-width: $screen-phone) {
+                height: 250px;
+            }
         }
     }
     &__count {
@@ -19,19 +27,26 @@
         left: 50%;
         position: absolute;
         transform: translateY(-50%);
+        @media screen and (max-width: $screen-phone) {
+            display: none;
+        }
     }
-    &__arrowleft {
+    &__arrow {
         cursor: pointer;
-        left: 1em;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-    }
-    &__arrowright {
-        cursor: pointer;
-        right: 1em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
+        img {
+            @media screen and (max-width: $screen-phone) {
+                width: 15px;
+            }
+        }
+        &--left {
+            left: 1em;
+            transform: translateY(-50%);
+        }
+        &--right {
+            right: 1em;
+            transform: translateY(-50%) rotate(180deg);
+        }
     }
 }

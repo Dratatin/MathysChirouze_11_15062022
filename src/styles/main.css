@@ -13,8 +13,13 @@ html {
 
 body {
   min-height: 100%;
-  padding-bottom: 10em;
+  padding-bottom: 15em;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding-bottom: 10em;
+  }
 }
 
 button {
@@ -41,6 +46,11 @@ h2 {
   font-weight: 500;
   font-size: 36px;
 }
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 18px;
+  }
+}
 
 h3 {
   font-size: 24px;
@@ -50,6 +60,11 @@ h3 {
 h4 {
   font-size: 18px;
   font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 14px;
+  }
 }
 
 code {
@@ -273,8 +288,15 @@ code {
 .slider {
   background: #FF6060;
   border-radius: 1.5em;
+  margin: auto;
   overflow: hidden;
   position: relative;
+  width: 85vw;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    width: 90vw;
+  }
 }
 .slider__content img {
   height: 415px;
@@ -282,6 +304,11 @@ code {
      object-fit: cover;
   vertical-align: bottom;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .slider__content img {
+    height: 250px;
+  }
 }
 .slider__count {
   color: white;
@@ -294,20 +321,29 @@ code {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.slider__arrowleft {
+@media screen and (max-width: 768px) {
+  .slider__count {
+    display: none;
+  }
+}
+.slider__arrow {
   cursor: pointer;
-  left: 1em;
   position: absolute;
   top: 50%;
+}
+@media screen and (max-width: 768px) {
+  .slider__arrow img {
+    width: 15px;
+  }
+}
+.slider__arrow--left {
+  left: 1em;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.slider__arrowright {
-  cursor: pointer;
+.slider__arrow--right {
   right: 1em;
-  position: absolute;
-  top: 50%;
   -webkit-transform: translateY(-50%) rotate(180deg);
       -ms-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
@@ -321,11 +357,32 @@ code {
 .stars__star {
   font-size: 48px;
 }
+@media screen and (max-width: 768px) {
+  .stars__star {
+    font-size: 28px;
+  }
+}
 .stars__star--active {
   color: #FF6060;
 }
 .stars__star--inactive {
   color: #E3E3E3;
+}
+
+.tag {
+  background: #FF6060;
+  border-radius: 0.8em;
+  color: white;
+  font-size: 14px;
+  margin-top: 1em;
+  margin-right: 0.7em;
+  padding: 0.4em 3em;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .tag {
+    font-size: 10px;
+  }
 }
 
 .home__houses {
@@ -361,11 +418,17 @@ code {
 }
 
 .housing {
-  margin: 0 auto 5em auto;
-  width: 85vw;
+  margin: auto;
 }
 .housing__content {
   color: #FF6060;
+  margin: auto;
+  width: 85vw;
+}
+@media screen and (max-width: 768px) {
+  .housing__content {
+    width: 90vw;
+  }
 }
 .housing__content__heading {
   -webkit-box-align: center;
@@ -379,10 +442,50 @@ code {
           justify-content: space-between;
   margin: 2em auto 1em auto;
 }
-.housing__content__heading__title h2 {
-  margin-bottom: 0.3em;
+@media screen and (max-width: 768px) {
+  .housing__content__heading {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
-.housing__content__heading__host {
+@media screen and (max-width: 768px) {
+  .housing__content__heading .housing-details__subtitle {
+    margin-top: 0.5em;
+  }
+}
+.housing__content__heading .housing-details__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .housing__content__heading .housing-informations {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1em auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .housing__content__heading .housing-informations {
+    margin: 0.5em;
+  }
+}
+.housing__content__heading .housing-informations__host {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -393,7 +496,14 @@ code {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.housing__content__heading__host img {
+@media screen and (max-width: 768px) {
+  .housing__content__heading .housing-informations__host {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+.housing__content__heading .housing-informations__host img {
   border-radius: 5em;
   margin-left: 1em;
   -webkit-box-ordinal-group: 3;
@@ -401,34 +511,16 @@ code {
           order: 2;
   width: 64px;
 }
-.housing__content__heading__host h4 {
+.housing__content__heading .housing-informations__host h4 {
   text-align: right;
   width: 90px;
 }
-.housing__content__details {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 1em auto;
-}
-.housing__content__details__tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.housing__content__details__tags li {
-  background: #FF6060;
-  border-radius: 0.75em;
-  color: white;
-  font-size: 14px;
-  margin-right: 0.5em;
-  padding: 0.5em 2em;
+@media screen and (max-width: 768px) {
+  .housing__content__heading .housing-informations__stars {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 .housing__content__description {
   display: grid;
@@ -439,6 +531,11 @@ code {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 1em auto;
+}
+@media screen and (max-width: 768px) {
+  .housing__content__description {
+    font-size: 12px;
+  }
 }
 
 .about {

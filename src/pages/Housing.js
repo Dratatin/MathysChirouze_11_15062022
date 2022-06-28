@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Slider from '../components/Slider';
 import Dropdown from '../components/Dropdown';
-import Stars from '../components/Starts'
+import Tag from '../components/Tag';
+import Stars from '../components/Starts';
 
 
 const Housing = () => {
@@ -42,25 +43,23 @@ const Housing = () => {
         <Slider tabimages={items.pictures} />
         <section className="housing__content">
           <div className="housing__content__heading">
-            <div className="housing__content__heading__title">
+            <div className="housing-details">
               <h2>{items.title}</h2>
-              <h4>{items.location}</h4>
+              <h4 className="housing-details__subtitle" >{items.location}</h4>
+              <ul className="housing-details__tags">
+                {items.tags.map((tag, index) => (
+                  <Tag key={index} tag={tag}/>
+                ))}
+              </ul>
             </div>
-            <div className="housing__content__heading__host">
-              <img src={items.host.picture} alt={items.title}/>
-              <h4>{items.host.name}</h4>
-            </div>
-          </div>
-          <div className="housing__content__details">
-            <ul className="housing__content__details__tags">
-              {items.tags.map((tag, index) => (
-                <li key={index}>
-                  {tag}
-                </li>
-              ))}
-            </ul>
-            <div className="housing__content__details__stars">
-                <Stars rating={items.rating}/>
+            <div className="housing-informations">
+              <div className="housing-informations__host">
+                <img src={items.host.picture} alt={items.title}/>
+                <h4>{items.host.name}</h4>
+              </div>
+              <div className="housing-informations__stars">
+                  <Stars rating={items.rating}/>
+              </div>
             </div>
           </div>
           <div className="housing__content__description">

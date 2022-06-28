@@ -6,6 +6,9 @@ h2 {
     color: $primary;
     font-weight: 500;
     font-size: 36px;
+    @media screen and (max-width: $screen-phone) {
+        font-size: 18px;;
+    }
 }
 
 h3 {
@@ -16,6 +19,9 @@ h3 {
 h4 {
     font-size: 18px;
     font-weight: 500;
+    @media screen and (max-width: $screen-phone) {
+        font-size: 14px;;
+    }
 }
 
 code {

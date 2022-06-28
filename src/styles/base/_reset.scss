@@ -12,8 +12,11 @@ html {
 
 body {
     min-height: 100%;
-    padding-bottom: 10em;
+    padding-bottom: 15em;
     position: relative;
+    @media screen and (max-width: $screen-phone) {
+        padding-bottom: 10em;
+    }
 }
 
 button {

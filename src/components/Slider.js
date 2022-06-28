@@ -27,10 +27,10 @@ const Slider = ({tabimages}) => {
             <div className="slider__count">
                     {slideIndex + 1}/{tabimages.length}
             </div>
-            <button className="slider__arrowleft" onClick={previousSlide}>
+            <button className="slider__arrow slider__arrow--left" onClick={previousSlide}>
                 <img src={arrow} alt="flèche vers la gauche" />
             </button>
-            <button className="slider__arrowright" onClick={nextSlide}>
+            <button className="slider__arrow slider__arrow--right" onClick={nextSlide}>
                 <img src={arrow} alt="flèche vers la droite" />
             </button>
         </div>

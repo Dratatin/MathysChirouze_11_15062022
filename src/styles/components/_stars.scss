@@ -2,6 +2,9 @@
     display: flex;
     &__star {
         font-size: 48px;
+        @media screen and (max-width: $screen-phone) {
+            font-size: 28px;
+        }
         &--active {
             color: $primary;
         }

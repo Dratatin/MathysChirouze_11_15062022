@@ -31,7 +31,7 @@ const Housing = () => {
           setError(error);
         }
       )
-  }, [])
+  }, [id])
 
   if (error) {
     return <div>Erreur : {error.message}</div>;
@@ -45,7 +45,7 @@ const Housing = () => {
           <div className="housing__content__heading">
             <div className="housing-details">
               <h2>{items.title}</h2>
-              <h4 className="housing-details__subtitle" >{items.location}</h4>
+              <h5 className="housing-details__subtitle" >{items.location}</h5>
               <ul className="housing-details__tags">
                 {items.tags.map((tag, index) => (
                   <Tag key={index} tag={tag}/>
@@ -55,7 +55,7 @@ const Housing = () => {
             <div className="housing-informations">
               <div className="housing-informations__host">
                 <img src={items.host.picture} alt={items.title}/>
-                <h4>{items.host.name}</h4>
+                <h5>{items.host.name}</h5>
               </div>
               <div className="housing-informations__stars">
                   <Stars rating={items.rating}/>

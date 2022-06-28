@@ -6,9 +6,6 @@ h2 {
     color: $primary;
     font-weight: 500;
     font-size: 36px;
-    @media screen and (max-width: $screen-phone) {
-        font-size: 18px;;
-    }
 }
 
 h3 {
@@ -19,12 +16,23 @@ h3 {
 h4 {
     font-size: 18px;
     font-weight: 500;
-    @media screen and (max-width: $screen-phone) {
-        font-size: 14px;;
-    }
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+}
+
+@media screen and (max-width: $screen-phone) {
+    h2 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 14px;
+    }
 }

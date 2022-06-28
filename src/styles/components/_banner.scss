@@ -1,28 +1,16 @@
 .banner {
     border-radius: 1.5em;
     display: flex;
+    height: 220px;
     justify-content: center;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     width: 85vw;
-    @media screen and (max-width: $screen-phone) {
-        border-radius: 1em;
-        height: 110px;
-        justify-content: flex-start;
-        width: 90vw;
-    }
-    &--notsubtitled {
-        @media screen and (max-width: $screen-phone) {
-            height: 220px;
-        }    
-    }
     &__img {
         filter: brightness(0.6);
         width: 100%;
-        object-fit: cover;
-        @media screen and (max-width: $screen-phone) {
-        }    
+        object-fit: cover; 
     }
     &__title {
         color: white;
@@ -33,7 +21,19 @@
         @media screen and (max-width: $screen-tablet) {
             font-size: 36px;
         }
-        @media screen and (max-width: $screen-phone) {
+    }
+}
+
+@media screen and (max-width: $screen-phone) {
+    .banner {
+        border-radius: 1em;
+        height: 110px;
+        justify-content: flex-start;
+        width: 90vw;
+        &--notsubtitled {
+            height: 220px;
+        }
+        &__title {
             width: 220px;
             font-size: 24px;
             margin-left: 1em;

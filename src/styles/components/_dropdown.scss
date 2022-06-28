@@ -6,17 +6,11 @@
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        padding: 0.4em 1em 0.4em 1em;
-        @media screen and (max-width: $screen-phone) {
-            padding: 0.4em 0.8em 0.4em 0.8em;
-        }
+        padding: 0.5em 1em 0.5em 1em;
         &__title {
             font-size: inherit;
         }
         &__icon {
-            @media screen and (max-width: $screen-phone) {
-                width: 14px;
-            }
             &--expanded {
                 transform: rotate(180deg);
             }
@@ -28,5 +22,15 @@
         color: $primary;
         font-weight: 400;
         padding: 1em;
+    }
+}
+
+@media screen and (max-width: $screen-phone) {
+    .dropdown {
+        &__button {
+            &__icon {
+                width: 14px;
+            }
+        }
     }
 }

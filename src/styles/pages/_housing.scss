@@ -4,40 +4,18 @@
     color: $primary;
     margin: auto;
     width: 85vw;
-    @media screen and (max-width: $screen-phone) {
-      width: 90vw;
-    }
     &__heading {
       align-items: center;
       display: flex;
       justify-content: space-between;
       margin: 2em auto 1em auto;
-      @media screen and (max-width: $screen-phone) {
-        align-items: flex-start;
-        flex-direction: column;
-      }
       .housing-details {
-        &__subtitle {
-          @media screen and (max-width: $screen-phone) {
-            margin-top: 0.5em;
-          }
-        }
         &__tags {
           display: flex;
           flex-wrap: wrap;
         }
       }
       .housing-informations {
-        @media screen and (max-width: $screen-phone) {
-          align-items: center;
-          display: flex;
-          justify-content: space-between;
-          margin: 1em auto;
-          width: 100%;
-          @media screen and (max-width: $screen-phone) {
-            margin: 0.5em;
-          }
-        }
         &__host {
           align-items: center;
           display: flex;
@@ -47,18 +25,13 @@
           }
           img {
             border-radius: 5em;
-            margin-left: 1em;
+            margin-left: 0.5em;
             order: 2;
             width: 64px;
           }
-          h4{
+          h5{
             text-align: right;
             width: 90px;
-          }
-        }
-        &__stars {
-          @media screen and (max-width: $screen-phone) {
-            order: 1;
           }
         }
       }
@@ -70,9 +43,45 @@
       grid-gap: 2em;
       justify-content: space-between;
       margin: 1em auto;
-      @media screen and (max-width: $screen-phone) {
-        font-size: 12px;
     }
+  }
+}
+
+@media screen and (max-width: $screen-phone) {
+  .housing {
+    &__content {
+      width: 90vw;
+      &__heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 1em auto 1em auto;
+        .housing-details {
+          &__subtitle {
+            margin-top: 0.5em;
+          }
+        }
+        .housing-informations {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          margin: 1em auto 0 auto;
+          width: 100%;
+          &__host {
+            order: 2;
+            img {
+              width: 32px;
+            }
+          }
+          &__stars {
+            order: 1;
+          }
+        }
+      }
+      &__description {
+        font-size: 12px;
+        grid-gap: 1.5em;
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }

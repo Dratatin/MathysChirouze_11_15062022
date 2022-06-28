@@ -46,11 +46,6 @@ h2 {
   font-weight: 500;
   font-size: 36px;
 }
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 18px;
-  }
-}
 
 h3 {
   font-size: 24px;
@@ -61,16 +56,25 @@ h4 {
   font-size: 18px;
   font-weight: 500;
 }
-@media screen and (max-width: 768px) {
-  h4 {
-    font-size: 14px;
-  }
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+}
 .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -161,6 +165,7 @@ code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 220px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -168,21 +173,6 @@ code {
   overflow: hidden;
   position: relative;
   width: 85vw;
-}
-@media screen and (max-width: 768px) {
-  .banner {
-    border-radius: 1em;
-    height: 110px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 90vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .banner--notsubtitled {
-    height: 220px;
-  }
 }
 .banner__img {
   -webkit-filter: brightness(0.6);
@@ -205,14 +195,25 @@ code {
     font-size: 36px;
   }
 }
+
 @media screen and (max-width: 768px) {
+  .banner {
+    border-radius: 1em;
+    height: 110px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 90vw;
+  }
+  .banner--notsubtitled {
+    height: 220px;
+  }
   .banner__title {
     width: 220px;
     font-size: 24px;
     margin-left: 1em;
   }
 }
-
 .card {
   border-radius: 1em;
   overflow: hidden;
@@ -257,20 +258,10 @@ code {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.4em 1em 0.4em 1em;
-}
-@media screen and (max-width: 768px) {
-  .dropdown__button {
-    padding: 0.4em 0.8em 0.4em 0.8em;
-  }
+  padding: 0.5em 1em 0.5em 1em;
 }
 .dropdown__button__title {
   font-size: inherit;
-}
-@media screen and (max-width: 768px) {
-  .dropdown__button__icon {
-    width: 14px;
-  }
 }
 .dropdown__button__icon--expanded {
   -webkit-transform: rotate(180deg);
@@ -285,18 +276,18 @@ code {
   padding: 1em;
 }
 
+@media screen and (max-width: 768px) {
+  .dropdown__button__icon {
+    width: 14px;
+  }
+}
 .slider {
   background: #FF6060;
-  border-radius: 1.5em;
+  border-radius: 1em;
   margin: auto;
   overflow: hidden;
   position: relative;
   width: 85vw;
-}
-@media screen and (max-width: 768px) {
-  .slider {
-    width: 90vw;
-  }
 }
 .slider__content img {
   height: 415px;
@@ -304,11 +295,6 @@ code {
      object-fit: cover;
   vertical-align: bottom;
   width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .slider__content img {
-    height: 250px;
-  }
 }
 .slider__count {
   color: white;
@@ -321,20 +307,10 @@ code {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-@media screen and (max-width: 768px) {
-  .slider__count {
-    display: none;
-  }
-}
 .slider__arrow {
   cursor: pointer;
   position: absolute;
   top: 50%;
-}
-@media screen and (max-width: 768px) {
-  .slider__arrow img {
-    width: 15px;
-  }
 }
 .slider__arrow--left {
   left: 1em;
@@ -349,6 +325,20 @@ code {
           transform: translateY(-50%) rotate(180deg);
 }
 
+@media screen and (max-width: 768px) {
+  .slider {
+    width: 90vw;
+  }
+  .slider__content img {
+    height: 250px;
+  }
+  .slider__count {
+    display: none;
+  }
+  .slider__arrow img {
+    width: 15px;
+  }
+}
 .stars {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,14 +382,6 @@ code {
   padding: 3em;
   width: 85vw;
 }
-@media screen and (max-width: 768px) {
-  .home__houses {
-    margin: 1.5em auto 3em auto;
-    background: unset;
-    padding: 0;
-    width: 90vw;
-  }
-}
 .home__houses__list {
   display: grid;
   gap: 3em;
@@ -410,13 +392,19 @@ code {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (max-width: 768px) {
+  .home__houses {
+    margin: 1.5em auto 3em auto;
+    background: unset;
+    padding: 0;
+    width: 90vw;
+  }
   .home__houses__list {
     gap: 1.5em;
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
 .housing {
   margin: auto;
 }
@@ -424,11 +412,6 @@ code {
   color: #FF6060;
   margin: auto;
   width: 85vw;
-}
-@media screen and (max-width: 768px) {
-  .housing__content {
-    width: 90vw;
-  }
 }
 .housing__content__heading {
   -webkit-box-align: center;
@@ -442,48 +425,12 @@ code {
           justify-content: space-between;
   margin: 2em auto 1em auto;
 }
-@media screen and (max-width: 768px) {
-  .housing__content__heading {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-@media screen and (max-width: 768px) {
-  .housing__content__heading .housing-details__subtitle {
-    margin-top: 0.5em;
-  }
-}
 .housing__content__heading .housing-details__tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-@media screen and (max-width: 768px) {
-  .housing__content__heading .housing-informations {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 1em auto;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  .housing__content__heading .housing-informations {
-    margin: 0.5em;
-  }
 }
 .housing__content__heading .housing-informations__host {
   -webkit-box-align: center;
@@ -505,22 +452,15 @@ code {
 }
 .housing__content__heading .housing-informations__host img {
   border-radius: 5em;
-  margin-left: 1em;
+  margin-left: 0.5em;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
   width: 64px;
 }
-.housing__content__heading .housing-informations__host h4 {
+.housing__content__heading .housing-informations__host h5 {
   text-align: right;
   width: 90px;
-}
-@media screen and (max-width: 768px) {
-  .housing__content__heading .housing-informations__stars {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
 }
 .housing__content__description {
   display: grid;
@@ -532,42 +472,82 @@ code {
           justify-content: space-between;
   margin: 1em auto;
 }
+
 @media screen and (max-width: 768px) {
+  .housing__content {
+    width: 90vw;
+  }
+  .housing__content__heading {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1em auto 1em auto;
+  }
+  .housing__content__heading .housing-details__subtitle {
+    margin-top: 0.5em;
+  }
+  .housing__content__heading .housing-informations {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1em auto 0 auto;
+    width: 100%;
+  }
+  .housing__content__heading .housing-informations__host {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .housing__content__heading .housing-informations__host img {
+    width: 32px;
+  }
+  .housing__content__heading .housing-informations__stars {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   .housing__content__description {
     font-size: 12px;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
 .about {
   margin: 0 auto;
   width: 85vw;
 }
+.about__content {
+  font-size: 24px;
+  margin: 1.5em auto 5em auto;
+  width: 65vw;
+}
+.about__content > * {
+  margin-bottom: 1.5em;
+}
+
 @media screen and (max-width: 768px) {
   .about {
     width: 90vw;
   }
-}
-.about__content {
-  font-size: 1.5em;
-  margin: 1.5em auto 5em auto;
-  width: 65vw;
-}
-@media screen and (max-width: 768px) {
   .about__content {
     font-size: 12px;
     margin: 1em auto 0 auto;
     width: 90vw;
   }
-}
-.about__content > * {
-  margin-bottom: 1.5em;
-}
-@media screen and (max-width: 768px) {
   .about__content > * {
     margin-bottom: 1em;
   }
 }
-
 .error404 {
   color: #FF6060;
   text-align: center;
@@ -593,6 +573,7 @@ code {
 }
 .error404 a {
   display: block;
+  font-weight: 500;
   text-decoration: underline;
   margin: 10em 2em;
 }

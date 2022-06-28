@@ -1,9 +1,9 @@
 const Banner = ({imgBanner, title}) => {
     return (
-        <div className="banner">
-            <img src={imgBanner} alt="Paysage de la nature"/>
+        <div className={title === undefined ? "banner banner--notsubtitled" : "banner"}>
+            <img src={imgBanner} className="banner__img" alt="Paysage de la nature"/>
             {title !== undefined && (
-                <h2>{title}</h2>
+                <h2 className="banner__title">{title}</h2>
             )}
         </div>
     )

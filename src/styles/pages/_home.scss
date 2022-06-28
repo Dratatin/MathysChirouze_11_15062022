@@ -1,16 +1,27 @@
 .home {
-  margin: 0 auto;
-  width: 85vw;
   &__houses {
     background-color: #F6F6F6;
     border-radius: 1.5em;
-    margin: 3em 0 5em 0;
+    margin: 3em auto 5em auto;
     padding: 3em;
-    width: 100%;
+    width: 85vw;
+    @media screen and (max-width: $screen-phone) {
+      margin: 1.5em auto 3em auto;
+      background: unset;
+      padding: 0;
+      width: 90vw;
+    }
     &__list {
       display: grid;
       gap: 3em;
       grid-template-columns: repeat(3, 1fr);
+      @media screen and (max-width: $screen-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: $screen-phone) {
+        gap: 1.5em;
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }

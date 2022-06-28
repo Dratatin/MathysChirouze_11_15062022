@@ -12,9 +12,9 @@ const Dropdown = ({title, content}) => {
 
     return (
         <div className="dropdown">
-            <div className={isExpended ? "dropdown__button dropdown__button--expanded" : "dropdown__button" } role="button" onClick={toogleExpand}>
+            <div className="dropdown__button" role="button" onClick={toogleExpand}>
                 <h3 className="dropdown__button__title">{title}</h3>
-                <img src={Arrow} alt="Arrow icon"/>
+                <img className={isExpended ? "dropdown__button__icon dropdown__button__icon--expanded" : "dropdown__button__icon"} src={Arrow} alt="Arrow icon"/>
             </div>
                 {isExpended && (typeof content === "string") && (
                     <p className="dropdown__content">{content}</p>

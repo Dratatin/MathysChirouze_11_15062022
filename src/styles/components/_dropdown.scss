@@ -6,12 +6,18 @@
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        padding: 0.4em 2em 0.4em 1em;
+        padding: 0.4em 1em 0.4em 1em;
+        @media screen and (max-width: $screen-phone) {
+            padding: 0.4em 0.8em 0.4em 0.8em;
+        }
         &__title {
             font-size: inherit;
         }
-        &--expanded {
-            img {
+        &__icon {
+            @media screen and (max-width: $screen-phone) {
+                width: 14px;
+            }
+            &--expanded {
                 transform: rotate(180deg);
             }
         }

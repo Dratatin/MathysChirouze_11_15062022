@@ -1,5 +1,5 @@
-import fullStar from '../assets/fullstar.svg'
-import emptyStar from '../assets/emptystar.svg'
+// import fullStar from '../assets/fullstar.svg'
+// import emptyStar from '../assets/emptystar.svg'
 
 const Stars = ({rating}) => {
     const maxRating = 5;

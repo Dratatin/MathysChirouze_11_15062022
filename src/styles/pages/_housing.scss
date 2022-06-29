@@ -10,6 +10,9 @@
       justify-content: space-between;
       margin: 2em auto 1em auto;
       .housing-details {
+        &__subtitle {
+          margin-top: 0.5em;
+        }
         &__tags {
           display: flex;
           flex-wrap: wrap;
@@ -55,11 +58,6 @@
         align-items: flex-start;
         flex-direction: column;
         margin: 1em auto 1em auto;
-        .housing-details {
-          &__subtitle {
-            margin-top: 0.5em;
-          }
-        }
         .housing-informations {
           align-items: center;
           display: flex;

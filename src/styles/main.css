@@ -237,6 +237,7 @@ code {
   left: 0;
   margin: 1em;
   position: absolute;
+  width: 200px;
   z-index: 1;
 }
 .card img {
@@ -249,7 +250,7 @@ code {
 
 .dropdown__button {
   background: #FF6060;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   cursor: pointer;
   display: -webkit-box;
@@ -258,7 +259,9 @@ code {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5em 1em 0.5em 1em;
+  position: relative;
+  padding: 0.6em 1em 0.6em 1em;
+  z-index: 1;
 }
 .dropdown__button__title {
   font-size: inherit;
@@ -270,10 +273,12 @@ code {
 }
 .dropdown__content {
   background: #F6F6F6;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #FF6060;
   font-weight: 400;
-  padding: 1em;
+  position: relative;
+  bottom: 10px;
+  padding: 1.1em 1em 1em 1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -425,6 +430,9 @@ code {
           justify-content: space-between;
   margin: 2em auto 1em auto;
 }
+.housing__content__heading .housing-details__subtitle {
+  margin-top: 0.5em;
+}
 .housing__content__heading .housing-details__tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,9 +494,6 @@ code {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 1em auto 1em auto;
-  }
-  .housing__content__heading .housing-details__subtitle {
-    margin-top: 0.5em;
   }
   .housing__content__heading .housing-informations {
     -webkit-box-align: center;

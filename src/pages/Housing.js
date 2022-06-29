@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Slider from '../components/Slider';
 import Dropdown from '../components/Dropdown';
@@ -9,6 +9,7 @@ import Stars from '../components/Starts';
 const Housing = () => {
   const { id } = useParams();
   const [error, setError] = useState(null);
+  const [error404, setError404] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
@@ -20,8 +21,14 @@ const Housing = () => {
       .then(response => response.json())
       .then(
         (result) => {
+          const logement = result.find(elem => elem.id === id);
           setIsLoaded(true);
-          setItems(result.find(elem => elem.id === id));
+          if (logement === undefined) {
+            setError404(true)
+          }
+          else {
+            setItems(logement);
+          }
         },
         // Remarque : il faut gérer les erreurs ici plutôt que dans
         // un bloc catch() afin que nous n’avalions pas les exceptions
@@ -35,6 +42,8 @@ const Housing = () => {
 
   if (error) {
     return <div>Erreur : {error.message}</div>;
+  } else if (error404) {
+    return <Navigate  to='/error404' />
   } else if (!isLoaded) {
     return <div>Chargement...</div>;
   } else {

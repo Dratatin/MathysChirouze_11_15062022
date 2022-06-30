@@ -190,7 +190,7 @@ code {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .banner__title {
     font-size: 36px;
   }
@@ -250,7 +250,7 @@ code {
 
 .dropdown__button {
   background: #FF6060;
-  border-radius: 10px;
+  border-radius: 0.5em;
   color: white;
   cursor: pointer;
   display: -webkit-box;
@@ -273,11 +273,11 @@ code {
 }
 .dropdown__content {
   background: #F6F6F6;
-  border-radius: 10px;
+  border-radius: 0.5em;
   color: #FF6060;
   font-weight: 400;
   position: relative;
-  bottom: 10px;
+  bottom: 0.5em;
   padding: 1.1em 1em 1em 1em;
 }
 
@@ -380,6 +380,44 @@ code {
   }
 }
 
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 10px;
+  border: 6px solid #FF6060;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  -webkit-animation: 1s rotate infinite linear;
+          animation: 1s rotate infinite linear;
+  height: 0;
+  width: 0;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .home__houses {
   background-color: #F6F6F6;
   border-radius: 1.5em;
@@ -392,7 +430,7 @@ code {
   gap: 3em;
   grid-template-columns: repeat(3, 1fr);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .home__houses__list {
     grid-template-columns: repeat(2, 1fr);
   }

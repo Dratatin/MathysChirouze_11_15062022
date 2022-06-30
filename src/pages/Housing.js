@@ -4,6 +4,7 @@ import Slider from '../components/Slider';
 import Dropdown from '../components/Dropdown';
 import Tag from '../components/Tag';
 import Stars from '../components/Starts';
+import Loader from '../components/Loader'
 
 
 const Housing = () => {
@@ -13,7 +14,7 @@ const Housing = () => {
   if (error) {
     return <span>Il y a eu un problème</span>
   } else if (isLoading) {
-    return <div>Chargement...</div>
+    return <Loader />
   } else {
     const logement = data.find(elem => elem.id === id);
 

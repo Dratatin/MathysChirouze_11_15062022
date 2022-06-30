@@ -1,14 +1,15 @@
+import { useFetch } from '../services/api'
 import HomeIMG from '../assets/bannerHome.png'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
-import { useFetch } from '../services/api'
+import Loader from '../components/Loader'
 
 const Home = () => {
   const { data, isLoading, error } = useFetch("../../logements.json")
   if (error) {
     return <span>Il y a eu un problème</span>
   } else if (isLoading) {
-    return <div>Chargement...</div>
+    return <Loader />
   } else {
     return (
       <div className="home">

@@ -1,7 +1,7 @@
 .dropdown {
     &__button {
         background: $primary;
-        border-radius: 10px;
+        border-radius: 0.5em;
         color: white;
         cursor: pointer;
         display: flex;
@@ -20,11 +20,11 @@
     }
     &__content {
         background: $lightdarkbackground;
-        border-radius: 10px;
+        border-radius: 0.5em;
         color: $primary;
         font-weight: 400;
         position: relative;
-        bottom: 10px;
+        bottom: 0.5em;
         padding: 1.10em 1em 1em 1em;
     }
 }

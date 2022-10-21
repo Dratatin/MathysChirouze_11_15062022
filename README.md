@@ -11,12 +11,15 @@ L'occasion parfaite pour vous d'ajouter une belle référence à votre portfolio
 Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end. Kasa en a également profité pour commander de nouvelles maquettes auprès de son designer habituel, qui est en freelance. Un gros chantier pour cette année !
 
 #### Sources :
-[Logements](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json)  
+[Logements (fichier json)](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json)  
 [Ligne de conduite](https://course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa+FR.pdf)  
 [Maquettes](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design?node-id=4%3A1) 
 
 ## Available Scripts
 In the project directory, you can run:
+
+### `npm install`
+Install each dependencies to launch this project
 
 ### `npm start`
 Runs the app in the development mode.\

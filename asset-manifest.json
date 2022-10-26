@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MathysChirouze_11_15062022/static/css/main.56e82d40.css",
-    "main.js": "/MathysChirouze_11_15062022/static/js/main.57d217e1.js",
+    "main.js": "/MathysChirouze_11_15062022/static/js/main.439f57f7.js",
     "static/media/bannerHome.png": "/MathysChirouze_11_15062022/static/media/bannerHome.9b17a7d7d3fb82888a89.png",
     "static/media/bannerAbout.png": "/MathysChirouze_11_15062022/static/media/bannerAbout.fce6fc3e9ed27433e9b0.png",
     "static/media/logoorange.svg": "/MathysChirouze_11_15062022/static/media/logoorange.d27ed9b350feeae67376c553de737efc.svg",
@@ -10,10 +10,10 @@
     "static/media/arrowdown.svg": "/MathysChirouze_11_15062022/static/media/arrowdown.6c538b91d1b5135b5db8f894cdffeed7.svg",
     "static/media/sliderarrow.svg": "/MathysChirouze_11_15062022/static/media/sliderarrow.e1c831f025531aaa34d3eb308a748ce2.svg",
     "main.56e82d40.css.map": "/MathysChirouze_11_15062022/static/css/main.56e82d40.css.map",
-    "main.57d217e1.js.map": "/MathysChirouze_11_15062022/static/js/main.57d217e1.js.map"
+    "main.439f57f7.js.map": "/MathysChirouze_11_15062022/static/js/main.439f57f7.js.map"
   },
   "entrypoints": [
     "static/css/main.56e82d40.css",
-    "static/js/main.57d217e1.js"
+    "static/js/main.439f57f7.js"
   ]
 }
